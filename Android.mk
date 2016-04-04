@@ -18,4 +18,6 @@ LOCAL_PATH := $(call my-dir)
 
 ifeq ($(TARGET_DEVICE),T00F)
     include $(call all-makefiles-under,$(LOCAL_PATH))
+    # Hack for build
+    $(shell rm -Rf $(OUT)/../../../../bionic/tests)
 endif
